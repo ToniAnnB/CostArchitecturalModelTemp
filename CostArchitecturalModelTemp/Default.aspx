@@ -2,7 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="max-w-screen-lg mx-auto px-4 py-8">
-        <!-- Header Section -->
         <div class="bg-yellow-400 text-black font-bold text-xl px-4 py-2">
             <h1>Cost Architectural Model</h1>
                     <div class="text-right text-sm italic mt-2">Created: <%: DateTime.Now.ToShortDateString() %></div>
@@ -12,7 +11,6 @@
             <h2>Programme Name: BCG20107- GENERAL CONSTRUCTION LEVEL 2</h2>
         </div>
 
-        <!-- Programme Variables Section -->
         <section class="mt-4 border border-black">
             <h3 class="bg-gray-200 font-bold px-4 py-2 border-b border-black">1. Programme Variables</h3>
             <div class="grid grid-cols-3 gap-4 p-4">
@@ -39,7 +37,6 @@
             </div>
         </section>
 
-        <!-- Programme Direct Cost Section -->
         <section class="mt-4 border border-black">
             <h3 class="bg-gray-200 font-bold px-4 py-2 border-b border-black">2. Programme Direct Cost</h3>
             <div class="grid grid-cols-2 gap-4 p-4">
@@ -66,7 +63,6 @@
             </div>
         </section>
 
-        <!-- Programme Overhead Cost Section -->
         <section class="mt-4 border border-black">
             <h3 class="bg-gray-200 font-bold px-4 py-2 border-b border-black">3. Programme Overhead Cost</h3>
             <div class="grid grid-cols-2 gap-4 p-4">
@@ -81,7 +77,6 @@
             </div>
         </section>
 
-        <!-- Total Programme Cost Section -->
         <section class="mt-4 border border-black">
             <h3 class="bg-gray-200 font-bold px-4 py-2 border-b border-black">4. Total Programme Cost</h3>
             <div class="p-4">
@@ -92,7 +87,6 @@
             </div>
         </section>
 
-        <!-- Per Student Cost Section -->
         <section class="mt-4 border border-black">
             <h3 class="bg-gray-200 font-bold px-4 py-2 border-b border-black">5. Per Student Cost</h3>
             <div class="p-4">
