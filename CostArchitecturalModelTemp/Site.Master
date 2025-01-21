@@ -6,20 +6,20 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - ArchiMetrics</title>
 
-<link href="css/output.css" rel="stylesheet">
+    <link href="css/output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-        
+
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
-<body>
+<body class="bg-sky-50 min-h-screen">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -40,11 +40,72 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="container body-content">
+<nav class="bg-slate-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo Section -->
+            <div class="flex items-center">
+                <a href="Default.aspx" class="text-xl font-bold text-sky-500 hover:text-sky-500">ArchiMetrics</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="flex lg:hidden">
+                <button id="mobile-menu-toggle" type="button" class="text-gray-800 hover:text-sky-500 focus:outline-none">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="Default.aspx" id="lnkHome" runat="server" class="text-gray-800 hover:text-sky-500 font-medium">Home</a>
+
+                <!-- Dropdown Menu -->
+                <div class="relative group">
+                    <button id="lnkServices" runat="server" class="text-gray-800 w-full hover:text-sky-500 py-4 font-medium flex items-center justify-content-center">
+                        Services
+                        <svg class="ml-1 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute w-56 left-0 mt-1 hidden group-hover:flex flex-col bg-white border border-sky-200 shadow-lg rounded-md">
+                        <a href="CostForm.aspx" class="block px-4 py-2 text-gray-700 hover:bg-sky-50 hover:text-sky-500">Cost Architectural Model</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-sky-50 hover:text-sky-500">Service 2</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-sky-50 hover:text-sky-500">Service 3</a>
+                    </div>
+                </div>
+
+                <a href="About.aspx" id="lnkAbout" runat="server" class="text-gray-800 hover:text-sky-500 font-medium">About</a>
+                <a href="Contact.aspx" id="lnkContact" runat="server" class="text-gray-800 hover:text-sky-500 font-medium">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden flex flex-col space-y-4 px-4 pt-4 pb-6 bg-slate-50 shadow-lg">
+        <a href="Default.aspx" id="lnkHomeMobile" runat="server" class="text-gray-800 hover:text-sky-500 font-medium">Home</a>
+<div class="relative">
+    <button id="lnkServicesMobile" type="button" class="text-gray-800 hover:text-sky-500 font-medium w-full text-left">
+        Services
+    </button>
+    <div id="servicesDropdown" class="hidden mt-1 flex flex-col">
+        <a href="CostForm.aspx" class="block px-4 py-2 text-gray-700 hover:bg-sky-50 hover:text-sky-500">Cost Architectural Model</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-sky-50 hover:text-sky-500">Service 2</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-sky-50 hover:text-sky-500">Service 3</a>
+    </div>
+</div>
+        <a href="about.aspx" id="lnkAboutMobile" runat="server" class="text-gray-800 hover:text-sky-500 font-medium">About</a>
+        <a href="contact.aspx" id="lnkContactMobile" runat="server" class="text-gray-800 hover:text-sky-500 font-medium">Contact</a>
+    </div>
+</nav>
+
+        <div class="">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
+        
         </div>
     </form>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

@@ -1063,7 +1063,15 @@ module.exports = {
             40: '40',
             50: '50',
         },
+        extend: {
+            colors: {
+                heart: '#3199CE',
+                'heart-light': '#5DB4E1', 
+                'heart-dark': '#2278A8',  
+            },
+        },
     },
+
     plugins: [],
 }
 
